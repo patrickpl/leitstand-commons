@@ -1,0 +1,5 @@
+// Infrastructure libraries
+include 'leitstand-commons'
+include 'leitstand-etc'
+include 'leitstand-test'
+include 'leitstand-template'

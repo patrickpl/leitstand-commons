@@ -1,0 +1,5 @@
+existing: env-value
+existing-config: dummy.yaml
+nested.flattened: flattened value
+nested:
+  value: nested value

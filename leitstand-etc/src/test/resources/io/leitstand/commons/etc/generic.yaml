@@ -1,0 +1,17 @@
+string: STRING
+int: 123
+float: 1.5
+double: 1.5
+boolean-true: true
+boolean-false: false
+string-array:
+- a
+- b
+- c
+nested: 
+  name: nested
+nested-array:
+- name: item_1
+  value: FIRST
+- name: item_2
+  value: SECOND

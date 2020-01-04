@@ -1,0 +1,18 @@
+apply plugin: 'java-library'
+
+dependencies {
+    compile project (':leitstand-commons')
+    compile 'junit:junit:4.12'
+    compile 'javax:javaee-api:8.0'
+    compile 'com.h2database:h2:1.4.200'
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            artifactId = 'leitstand-test'
+            version = project.getVersion()
+            from components.java
+        }
+    }
+}

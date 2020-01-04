@@ -1,0 +1,25 @@
+plugins {
+    id 'java-library'
+    id 'eclipse-wtp'
+}
+
+dependencies {
+    compile project(':leitstand-commons')
+    compileOnly group: 'javax', name: 'javaee-api', version: '8.0'
+    compile group: 'org.yaml', name: 'snakeyaml', version: '1.19'
+
+    testCompile 'junit:junit:4.12'
+    testCompile group: 'javax', name: 'javaee-api', version: '8.0'
+    testCompile group: 'org.mockito', name: 'mockito-all', version: '1.8.4'
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            artifactId = 'leitstand-etc'
+            version = project.getVersion()
+            from components.java
+        }
+    }
+}
+

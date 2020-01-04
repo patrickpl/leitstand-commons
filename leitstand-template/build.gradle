@@ -1,0 +1,32 @@
+plugins {
+    id 'java-library'
+    id 'eclipse-wtp'
+}
+
+dependencies {
+    compileOnly 'javax:javaee-api:8.0'
+    compile 'com.github.spullara.mustache.java:compiler:0.9.5'
+
+    compile project(':leitstand-commons')
+    compile project(':leitstand-etc')
+
+    compile project(':leitstand-commons')
+    compile project(':leitstand-etc')
+	
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.glassfish:javax.json:1.1.4'
+    testCompile 'org.eclipse:yasson:1.0.3'
+    testCompile 'org.mockito:mockito-all:1.8.4'
+    testCompile 'org.glassfish.jersey.core:jersey-client:2.7'
+	
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            artifactId = 'leitstand-template'
+            version = project.getVersion()
+            from components.java
+        }
+    }
+}

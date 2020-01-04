@@ -1,0 +1,5 @@
+foo: foo-value
+bar: bar-value
+snake_case: snake case value
+camelCase: camel case value
+snakeCamelCase: snake camel case value

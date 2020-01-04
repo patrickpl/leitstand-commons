@@ -1,0 +1,30 @@
+plugins {
+    id 'java-library'
+    id 'eclipse-wtp'
+}
+
+dependencies {
+    compileOnly 'javax:javaee-api:8.0'
+    compileOnly 'org.postgresql:postgresql:42.2.5'
+
+    testCompile 'junit:junit:4.12'
+    testCompile 'javax:javaee-api:8.0'
+    testCompile 'org.mockito:mockito-all:1.8.4'
+    testCompile 'com.h2database:h2:1.4.200'
+    testCompile 'org.glassfish:javax.json:1.1.4'
+    testCompile 'org.postgresql:postgresql:42.2.5'
+    testCompile 'org.glassfish.jersey.core:jersey-client:2.7'
+    testCompile 'org.hibernate:hibernate-validator:4.2.0.Final'
+    testCompile 'org.eclipse:yasson:1.0.3'
+
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            artifactId = 'leitstand-commons'
+            version = project.getVersion()
+            from components.java
+        }
+    }
+}

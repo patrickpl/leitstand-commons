@@ -1,0 +1,5 @@
+{"foo": "foo-value",
+ "bar":"bar-value",
+ "camelCase":"camel case value",
+ "snake_case":"snake case value",
+ "snake_camel_case":"snake camel case value"}
